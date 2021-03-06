@@ -126,8 +126,8 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_VENDOR_PROPERTIES += \
    debug.sf.latch_unsignaled=1 \
-   persist.sys.sf.native_mode=0 \
-   persist.sys.sf.color_mode=0 \
+   persist.sys.sf.native_mode=2 \
+   persist.sys.sf.color_mode=9 \
    ro.vendor.display.ad=1 \
    ro.vendor.display.ad.sdr_calib_data=/vendor/etc/sdr_config.cfg \
    ro.vendor.display.ad.hdr_calib_data=/vendor/etc/hdr_config.cfg \
@@ -146,7 +146,7 @@ PRODUCT_PACKAGES += \
 
 ### Refresh Rate Dynamic Props
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    ro.surface_flinger.set_idle_timer_ms?=500 \
+    ro.surface_flinger.set_idle_timer_ms=500 \
     ro.surface_flinger.set_touch_timer_ms=750 \
     ro.surface_flinger.set_display_power_timer_ms=1000 \
     ro.surface_flinger.use_content_detection_for_refresh_rate=true
@@ -155,7 +155,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.disable_backpressure=0 \
     debug.sf.enable_gl_backpressure=1 \
     vendor.display.idle_time=0 \
-    vendor.display.idle_time_inactive=0
+    vendor.display.idle_time_inactive=0 \
+    vendor.display.qdcm.mode_combine=2
 
 # Enable app/sf phase offset as durations. The numbers below are translated from the existing
 # positive offsets by finding the duration app/sf will have with the offsets.
