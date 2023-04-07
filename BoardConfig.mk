@@ -67,13 +67,14 @@ BOARD_KERNEL_CMDLINE += kpti=off cgroup.memory=nokmem,nosocket
 BOARD_KERNEL_IMAGE_NAME := Image.gz
 BOARD_KERNEL_SEPARATED_DTBO := true
 
-TARGET_KERNEL_CONFIG := vendor/surya-perf_defconfig
+TARGET_KERNEL_CONFIG := surya_defconfig
 TARGET_KERNEL_SOURCE := kernel/xiaomi/surya
 TARGET_KERNEL_VERSION := 4.14
 
 TARGET_KERNEL_CLANG_COMPILE := true
 TARGET_KERNEL_ADDITIONAL_FLAGS := LD=ld.lld AR=llvm-ar AS=llvm-as NM=llvm-nm OBJCOPY=llvm-objcopy OBJDUMP=llvm-objdump STRIP=llvm-strip LLVM=1 LLVM_IAS=1
 TARGET_KERNEL_ADDITIONAL_FLAGS += HOSTCFLAGS="-fuse-ld=lld -Wno-unused-command-line-argument"
+TARGET_KERNEL_CLANG_VERSION := snapdragon
 
 # Media
 TARGET_DISABLED_UBWC := true
@@ -110,6 +111,12 @@ TARGET_COPY_OUT_VENDOR := vendor
 # Power
 TARGET_POWERHAL_MODE_EXT := $(DEVICE_PATH)/power/power-mode.cpp
 TARGET_TAP_TO_WAKE_NODE  := "/proc/tp_gesture"
+
+# Properties
+#TARGET_ODM_PROP += $(DEVICE_PATH)/odm.prop
+#TARGET_PRODUCT_PROP += $(DEVICE_PATH)/product.prop
+#TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
+#TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 
 # QC common
 OVERRIDE_QCOM_HARDWARE_VARIANT := sm8150-common
