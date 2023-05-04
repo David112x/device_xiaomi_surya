@@ -121,6 +121,12 @@ on boot
     setprop vendor.usb.qdss.inst.name "qdss"
     setprop sys.usb.configfs 1
 
+# Allow system to manipulate KProfiles modes and parameters
+    chown system system /sys/module/kprofiles/parameters/auto_kprofiles
+    chmod 0660 /sys/module/kprofiles/parameters/auto_kprofiles
+    chown system system /sys/module/kprofiles/parameters/kp_mode
+    chmod 0660 /sys/module/kprofiles/parameters/kp_mode
+
 # access permissions for FPC service
     chown system system /sys/bus/platform/devices/soc/soc:fpc1020/irq
     chown system system /sys/bus/platform/devices/soc/soc:fpc1020/wakeup_enable

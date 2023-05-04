@@ -78,7 +78,7 @@ PRODUCT_VENDOR_PROPERTIES += \
 # Chipset
 PRODUCT_VENDOR_PROPERTIES += \
     ro.soc.model=SM7150
-    
+
 # ContextHub
 PRODUCT_PACKAGES += \
     android.hardware.contexthub@1.0-impl.generic \
@@ -97,6 +97,10 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 # Device Settings
 PRODUCT_PACKAGES += \
     XiaomiParts
+
+# KProfiles
+PRODUCT_PACKAGES += \
+    KProfiles
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/parts/init.xiaomiparts.rc:$(TARGET_COPY_OUT_SYSTEM)/etc/init/init.xiaomiparts.rc \
@@ -135,6 +139,7 @@ PRODUCT_VENDOR_PROPERTIES += \
 
 USE_REFRESH_RATE_LIST := true
 ifeq ($(USE_REFRESH_RATE_LIST), true)
+
 ## Overlays
 PRODUCT_PACKAGES += \
     J20CRefreshRateListSettingsOVerlay
@@ -169,6 +174,7 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     debug.sf.earlyGl.sf.duration=13500000 \
     debug.sf.earlyGl.app.duration=21000000
 else
+
 ### Overlays
 PRODUCT_PACKAGES += \
     J20CSmoothDisplaySettingsOverlay
