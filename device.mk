@@ -78,7 +78,7 @@ PRODUCT_VENDOR_PROPERTIES += \
 # Chipset
 PRODUCT_VENDOR_PROPERTIES += \
     ro.soc.model=SM7150
-    
+
 # ContextHub
 PRODUCT_PACKAGES += \
     android.hardware.contexthub@1.0-impl.generic \
@@ -97,6 +97,10 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 # Device Settings
 PRODUCT_PACKAGES += \
     XiaomiParts
+
+# KProfiles
+PRODUCT_PACKAGES += \
+    KProfiles
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/parts/init.xiaomiparts.rc:$(TARGET_COPY_OUT_SYSTEM)/etc/init/init.xiaomiparts.rc \
