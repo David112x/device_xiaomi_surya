@@ -1,0 +1,4 @@
+[submodule "kprofiles"]
+	path = kprofiles
+	url = https://github.com/CannedShroud/android_packages_apps_KProfiles
+	branch = main
