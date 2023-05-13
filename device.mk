@@ -268,7 +268,7 @@ PRODUCT_COPY_FILES += \
 
 # Init scripts
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/init/init.qcom.usb.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.qcom.usb.rc \
+    $(LOCAL_PATH)/init/init.surya.charger.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.surya.charger.rc
     $(LOCAL_PATH)/init/init.hardware.diag.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.hardware.diag.rc \
     $(LOCAL_PATH)/init/init.surya.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.surya.rc \
     $(LOCAL_PATH)/init/init.surya.perf.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.surya.perf.rc \
@@ -279,7 +279,6 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/init/init.mi.usb.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.mi.usb.sh \
-    $(LOCAL_PATH)/init/init.qcom.usb.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qcom.usb.sh \
     $(LOCAL_PATH)/init/init.qti.dcvs.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qti.dcvs.sh
 
 # IR
@@ -306,6 +305,14 @@ PRODUCT_VENDOR_PROPERTIES += \
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.light-service.xiaomi
+
+# USB
+PRODUCT_PACKAGES += \
+   android.hardware.usb@1.3-service-qti \
+   init.qcom.usb.rc \
+   init.qcom.usb.sh
+
+PRODUCT_SOONG_NAMESPACES += vendor/qcom/opensource/usb/etc
 
 # VNDK
 PRODUCT_COPY_FILES += \
