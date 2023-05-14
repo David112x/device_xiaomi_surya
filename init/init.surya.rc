@@ -13,6 +13,7 @@
 # limitations under the License.
 
 import /vendor/etc/init/hw/init.xiaomiparts.rc
+import /vendor/etc/init/hw/init.surya.charger.rc
 
 on early-boot
     # SSR Setup
