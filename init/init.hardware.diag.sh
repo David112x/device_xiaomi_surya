@@ -21,3 +21,4 @@ if [ "$msm_serial" != "" ]; then
 fi
 	machine_type=`cat /sys/devices/soc0/machine`
 	setprop vendor.usb.product_string "$machine_type-$soc_hwplatform _SN:$msm_serial_hex"
+	echo $msm_serial_hex > /config/usb_gadget/g1/functions/diag.diag/serial
