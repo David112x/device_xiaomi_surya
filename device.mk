@@ -278,6 +278,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/init/ueventd.surya.rc:$(TARGET_COPY_OUT_ODM)/etc/ueventd.rc
 
 PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/init/init.hardware.diag.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.hardware.diag.sh \
     $(LOCAL_PATH)/init/init.mi.usb.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.mi.usb.sh \
     $(LOCAL_PATH)/init/init.qti.dcvs.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qti.dcvs.sh
 
