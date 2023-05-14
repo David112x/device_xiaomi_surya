@@ -17,7 +17,6 @@
 cc_library_static {
     name: "libinit_surya",
     srcs: ["init_surya.cpp"],
-    overrides: ["android.hardware.usb@1.0-service"],
     recovery_available: true,
     whole_static_libs: ["libbase"],
     include_dirs: [
@@ -25,3 +24,5 @@ cc_library_static {
         "system/libbase/include"
     ]
 }
+
+
