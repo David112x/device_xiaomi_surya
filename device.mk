@@ -262,7 +262,7 @@ PRODUCT_COPY_FILES += \
 
 # Init scripts
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/init/init.surya.charger.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.surya.charger.rc
+    $(LOCAL_PATH)/init/init.surya.charger.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.surya.charger.rc \
     $(LOCAL_PATH)/init/init.hardware.diag.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.hardware.diag.rc \
     $(LOCAL_PATH)/init/init.surya.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.surya.rc \
     $(LOCAL_PATH)/init/init.surya.perf.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.surya.perf.rc \
