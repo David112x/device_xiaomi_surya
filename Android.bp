@@ -13,4 +13,5 @@ prebuilt_hidl_interfaces {
     interfaces: [
         "vendor.qti.hardware.dsp@1.0::IDspService",
     ],
+    overrides: ["android.hardware.usb@1.0-service"],
 }
