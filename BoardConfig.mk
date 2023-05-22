@@ -39,6 +39,9 @@ TARGET_NO_BOOTLOADER := true
 # Camera
 MALLOC_SVELTE_FOR_LIBC32 := true
 
+# FM
+BOARD_HAVE_QCOM_FM := true
+
 # HIDL
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += $(DEVICE_PATH)/configs/hidl/device_framework_compatibility_matrix.xml
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/hidl/manifest.xml

@@ -315,7 +315,6 @@ PRODUCT_PACKAGES += \
 # FM
 PRODUCT_PACKAGES += \
    FM2 \
-   libqcomfm_jni \
    qcom.fmradio
 
 PRODUCT_SOONG_NAMESPACES += vendor/qcom/opensource/usb/etc
