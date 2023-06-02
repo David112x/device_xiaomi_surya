@@ -1,5 +1,8 @@
 allow init firmware_file:file mounton;
 
+# FM
+set_prop(vendor_init, vendor_fm_prop)
+
 # XiaomiParts
 allow init vendor_sysfs_cpu_boost:{ file lnk_file } rw_file_perms;
 allow init vendor_sysfs_devfreq:{ file lnk_file } rw_file_perms;

@@ -7,3 +7,6 @@ ro.product.mod_device          u:object_r:build_prop:s0
 
 # XiaomiParts
 persist.lcd.                   u:object_r:persist_lcd_prop:s0
+
+# FM Radio
+ro.vendor.fm.                  u:object_r:vendor_fm_prop:s0
