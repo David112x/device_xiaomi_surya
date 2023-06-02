@@ -78,7 +78,7 @@ PRODUCT_VENDOR_PROPERTIES += \
 # Chipset
 PRODUCT_VENDOR_PROPERTIES += \
     ro.soc.model=SM7150
-
+    
 # ContextHub
 PRODUCT_PACKAGES += \
     android.hardware.contexthub@1.0-impl.generic \
@@ -97,10 +97,6 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 # Device Settings
 PRODUCT_PACKAGES += \
     XiaomiParts
-
-# KProfiles
-PRODUCT_PACKAGES += \
-    KProfiles
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/parts/init.xiaomiparts.rc:$(TARGET_COPY_OUT_SYSTEM)/etc/init/init.xiaomiparts.rc \
@@ -268,7 +264,7 @@ PRODUCT_COPY_FILES += \
 
 # Init scripts
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/init/init.qcom.usb.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.qcom.usb.rc \
+    $(LOCAL_PATH)/init/init.surya.charger.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.surya.charger.rc \
     $(LOCAL_PATH)/init/init.hardware.diag.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.hardware.diag.rc \
     $(LOCAL_PATH)/init/init.surya.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.surya.rc \
     $(LOCAL_PATH)/init/init.surya.perf.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.surya.perf.rc \
@@ -278,8 +274,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/init/ueventd.surya.rc:$(TARGET_COPY_OUT_ODM)/etc/ueventd.rc
 
 PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/init/init.hardware.diag.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.hardware.diag.sh \
     $(LOCAL_PATH)/init/init.mi.usb.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.mi.usb.sh \
-    $(LOCAL_PATH)/init/init.qcom.usb.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qcom.usb.sh \
     $(LOCAL_PATH)/init/init.qti.dcvs.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qti.dcvs.sh
 
 # IR
@@ -306,6 +302,13 @@ PRODUCT_VENDOR_PROPERTIES += \
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.light-service.xiaomi
+
+# USB
+PRODUCT_PACKAGES += \
+   init.qcom.usb.rc \
+   init.qcom.usb.sh
+
+PRODUCT_SOONG_NAMESPACES += vendor/qcom/opensource/usb/etc
 
 # VNDK
 PRODUCT_COPY_FILES += \
