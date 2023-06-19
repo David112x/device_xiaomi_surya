@@ -241,9 +241,6 @@ PRODUCT_VENDOR_PROPERTIES += \
 PRODUCT_SYSTEM_PROPERTIES += \
     persist.sys.fuse.passthrough.enable=true
 
-# GPS
-LOC_HIDL_VERSION := 4.0
-
 # GSI keys
 $(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
 
