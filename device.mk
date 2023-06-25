@@ -386,7 +386,8 @@ PRODUCT_PACKAGES += \
     KarnaWifiOverlay \
     NotchBarKillerOverlay \
     SuryaFrameworksOverlay \
-    SuryaWifiOverlay
+    SuryaWifiOverlay \
+    SuryaNfcOverlay
 
 # Partitions
 PRODUCT_BUILD_SUPER_PARTITION := false
