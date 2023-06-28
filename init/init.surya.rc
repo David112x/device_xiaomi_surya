@@ -30,10 +30,6 @@ on init
     chown system system /sys/touchpanel/double_tap
     chmod 0644 /sys/touchpanel/double_tap
 
-    chown system system /sys/module/battery_saver/parameters/enabled
-    chmod 0664 /sys/module/battery_saver/parameters/enabled
-
-    # Change permissions for /dev/diag
     chmod 0666 /dev/diag
 
 on property:ro.boot.hwname=*
