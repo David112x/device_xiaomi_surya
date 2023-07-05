@@ -30,6 +30,7 @@
 import /vendor/etc/init/hw/init.xiaomi.fingerprint.rc
 import /vendor/etc/init/hw/init.xiaomi.rci
 import /vendor/etc/init/hw/init.hardware.diag.rc
+import /vendor/etc/init/hw/init.target.charger.rc
 
 on early-init
     write /proc/sys/kernel/sched_boost 1
