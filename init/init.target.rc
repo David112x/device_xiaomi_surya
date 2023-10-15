@@ -28,9 +28,10 @@
 #
 
 import /vendor/etc/init/hw/init.xiaomi.fingerprint.rc
-import /vendor/etc/init/hw/init.xiaomi.rci
+import /vendor/etc/init/hw/init.xiaomi.rc
 import /vendor/etc/init/hw/init.hardware.diag.rc
 import /vendor/etc/init/hw/init.target.charger.rc
+import /vendor/etc/init/hw/init.kprofiles.rc
 
 on early-init
     write /proc/sys/kernel/sched_boost 1
@@ -122,12 +123,6 @@ on boot
     setprop vendor.usb.dpl.inst.name "dpl"
     setprop vendor.usb.qdss.inst.name "qdss"
     setprop sys.usb.configfs 1
-
-# Allow system to manipulate KProfiles modes and parameters
-    chown system system /sys/module/kprofiles/parameters/auto_kprofiles
-    chmod 0660 /sys/module/kprofiles/parameters/auto_kprofiles
-    chown system system /sys/module/kprofiles/parameters/kp_mode
-    chmod 0660 /sys/module/kprofiles/parameters/kp_mode
 
 # access permissions for FPC service
     chown system system /sys/bus/platform/devices/soc/soc:fpc1020/irq

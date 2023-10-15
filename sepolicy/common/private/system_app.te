@@ -1,3 +1,6 @@
 # XiaomiParts
 set_prop(system_app, persist_lcd_prop)
 allow system_app proc_nvt_feature:file rw_file_perms;
+
+# Allow init to set attribute to sysfs_kprofiles
+allow init sysfs_kprofiles:file setattr;

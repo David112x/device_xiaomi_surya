@@ -265,11 +265,12 @@ PRODUCT_COPY_FILES += \
 
 # Init scripts
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/init/init.target.charger.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.target.charger.rc \
     $(LOCAL_PATH)/init/init.hardware.diag.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.hardware.diag.rc \
     $(LOCAL_PATH)/init/init.surya.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.surya.rc \
     $(LOCAL_PATH)/init/init.surya.perf.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.surya.perf.rc \
+    $(LOCAL_PATH)/kprofiles/init/init.kprofiles.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.kprofiles.rc \
     $(LOCAL_PATH)/init/init.target.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.target.rc \
+    $(LOCAL_PATH)/init/init.target.charger.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.target.charger.rc \
     $(LOCAL_PATH)/init/init.xiaomi.fingerprint.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.xiaomi.fingerprint.rc \
     $(LOCAL_PATH)/init/init.xiaomi.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.xiaomi.rc \
     $(LOCAL_PATH)/init/ueventd.surya.rc:$(TARGET_COPY_OUT_ODM)/etc/ueventd.rc
