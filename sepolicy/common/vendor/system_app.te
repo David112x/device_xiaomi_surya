@@ -1,2 +1,5 @@
 # Xiaomi Parts
 allow system_app sysfs_thermal:file rw_file_perms;
+
+# KProfiles
+allow system_app sysfs_kprofiles:file rw_file_perms;
